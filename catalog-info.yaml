@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "rest-api"
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/adr-location: docs/adrs
+    github.com/project-slug: "shiftdp/rest-api"
+  links:
+    - url: 'https://google.com'
+      title: '"rest-api" Link'
+      # icon: ''
+      # type: ''
+spec:
+  type: service
+  owner: user:guest
+  lifecycle: experimental
