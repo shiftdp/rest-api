@@ -7,6 +7,15 @@ spec:
   owner: user:fasanosalvatore
 ---
 apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: rest-api-registry
+  description: Docker Registry
+spec:
+  type: registry
+  owner: user:fasanosalvatore
+---
+apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: "rest-api"
@@ -24,3 +33,5 @@ spec:
   type: service
   owner: user:fasanosalvatore
   lifecycle: production
+  dependsOn:
+    - rest-api-registry
