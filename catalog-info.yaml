@@ -1,4 +1,12 @@
 apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: demo
+  description: System for demo purposes
+spec:
+  owner: user:fasanosalvatore
+---
+apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: "rest-api"
@@ -12,6 +20,7 @@ metadata:
       # icon: ''
       # type: ''
 spec:
+  system: demo
   type: service
   owner: user:fasanosalvatore
-  lifecycle: experimental
+  lifecycle: production
